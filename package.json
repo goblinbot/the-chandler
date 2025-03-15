@@ -1,0 +1,33 @@
+{
+  "name": "the-chandler",
+  "version": "1.0.0",
+  "description": "Cultist aura discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "npm run deploy-commands && npm run start",
+    "start": "node .",
+    "deploy-commands": "node deploy-commands"
+  },
+  "keywords": [
+    "the",
+    "higher",
+    "i",
+    "rise",
+    "the",
+    "more",
+    "i",
+    "see"
+  ],
+  "author": "Thijs Boerma",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.18.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.5.3",
+    "prettier-eslint": "^16.3.0"
+  }
+}
