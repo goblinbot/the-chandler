@@ -17,14 +17,9 @@ module.exports = {
     .setDescription("Vibe check?"),
 
   async execute(interaction) {
-    const _randomAspectName = weightedRandom(
-      getAspectNameArray(),
-      getAspectWeightArray()
-    );
-    const _aspect = getAspectByName(_randomAspectName);
+    const _name = weightedRandom(getAspectNameArray(), getAspectWeightArray());
+    const _aspect = getAspectByName(_name);
     const _file = new AttachmentBuilder(getAspectIcon(_aspect));
-
-    console.log(_aspect);
 
     const _aspectEmbed = new EmbedBuilder()
       .setImage(`attachment://${_aspect.icon}`)

@@ -9,11 +9,13 @@ const {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("loudly")
-    .setDescription("Replies, but IN THE RAW TONGUE OF KING CRUCIBLE")
+    .setDescription(
+      "TOGETHER WE WILL COMMEMORATE THE TONGUE OF THE UNBURNT GOD."
+    )
     .addStringOption((option) =>
       option
         .setName("input")
-        .setDescription("MAJESTIC WORDS")
+        .setDescription("WORDS TO BE SPOKEN LOUDLY")
         .setRequired(true)
         .setMaxLength(5_00)
     )
@@ -28,33 +30,17 @@ module.exports = {
     let _shout = interaction.options.getString("input");
     _shout = bold(`# ${_shout.toUpperCase()}`);
 
-    // const channel = interaction.options.get;
-
-    // await interaction.reply(_shout);
     const file = new AttachmentBuilder(`${appRoot}/image/kingCrucible.jpg`);
-    // const file2 = new AttachmentBuilder(
-    //   `${appRoot}/image/powers/aspectKnock.png`
-    // );
-
     const exampleEmbed = new EmbedBuilder()
       .setImage("attachment://kingCrucible.jpg")
-      //   .setImage("attachment://aspectKnock.png")
       .setDescription(_shout)
-
-      //   .addFields({ name: "Test 1", value: "Yes yes?", inline: true })
-      //   .addFields({ name: "Test 2", value: "Yes?", inline: true })
-      //   .addFields({ name: "Test 3", value: "Maybe", inline: true })
       .setColor(0xf08d49);
 
     await interaction.reply({
-      content: _shout,
+      //   content: _shout,
       files: [file],
       embeds: [exampleEmbed],
     });
-    // await interaction.followUp(bold(_shout));
-
-    // await interaction.reply({ content: bold(_shout), files: [file] });
+    await interaction.followUp(bold(_shout));
   },
 };
-
-// message.channel.send("little dog", {files: ["https://i.imgur.com/xxXXXxx.jpeg"] });
