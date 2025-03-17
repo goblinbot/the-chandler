@@ -1,6 +1,5 @@
 const {
   SlashCommandBuilder,
-  ChannelType,
   AttachmentBuilder,
   EmbedBuilder,
   bold,
@@ -18,13 +17,6 @@ module.exports = {
         .setDescription("WORDS TO BE SPOKEN LOUDLY")
         .setRequired(true)
         .setMaxLength(5_00)
-    )
-    .addChannelOption((option) =>
-      option
-        .setName("channel")
-        .setDescription("The channel to echo into")
-        // Ensure the user can only select a TextChannel for output
-        .addChannelTypes(ChannelType.GuildText)
     ),
   async execute(interaction) {
     let _shout = interaction.options.getString("input");
@@ -41,6 +33,6 @@ module.exports = {
       files: [file],
       embeds: [exampleEmbed],
     });
-    await interaction.followUp(bold(_shout));
+    // await interaction.followUp("King Crucible has spoken!");
   },
 };
