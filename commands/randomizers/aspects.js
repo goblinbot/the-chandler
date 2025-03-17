@@ -4,7 +4,6 @@ const {
   EmbedBuilder,
 } = require("discord.js");
 const {
-  getRandomAspect,
   getAspectIcon,
   getAspectNameArray,
   getAspectWeightArray,
@@ -18,11 +17,6 @@ module.exports = {
     .setDescription("Vibe check?"),
 
   async execute(interaction) {
-    // const _aspect = getRandomAspect();
-
-    // const _aspectArr = getAspectNameArray();
-    // const _aspectWeights = getAspectWeightArray();
-
     const _randomAspectName = weightedRandom(
       getAspectNameArray(),
       getAspectWeightArray()
@@ -37,7 +31,7 @@ module.exports = {
       .addFields({ name: "Principle", value: _aspect.name, inline: true })
       .addFields({ name: "Art", value: _aspect.concept, inline: true })
       //   .addFields({ name: "Test 3", value: "Maybe", inline: true })
-      .setColor(0xf08d49);
+      .setColor(_aspect.color || 0x777777);
 
     await interaction.reply({
       content: "Vibe checking ..",
