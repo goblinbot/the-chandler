@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 const { token } = require("./config.json");
-const { initClientCommands } = require("./utils/commands");
-const { initClientEvents } = require("./utils/events");
+const { initClientCommands } = require("./utils/commands.utils");
+const { initClientEvents } = require("./utils/events.utils");
 
 const path = require("node:path");
 global.appRoot = path.resolve(__dirname);
