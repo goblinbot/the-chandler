@@ -22,6 +22,7 @@
   "author": "Thijs Boerma",
   "license": "ISC",
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.68",
     "discord.js": "^14.18.0"
   },
   "devDependencies": {

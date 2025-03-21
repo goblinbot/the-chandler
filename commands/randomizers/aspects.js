@@ -13,7 +13,7 @@ const { weightedRandom } = require("../../utils/random.utils");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("aspects")
+    .setName("single-aspect")
     .setDescription("Vibe check?"),
 
   async execute(interaction) {
@@ -25,7 +25,6 @@ module.exports = {
       .setImage(`attachment://${_aspect.icon}`)
       .addFields({ name: "Principle", value: _aspect.name, inline: true })
       .addFields({ name: "Art", value: _aspect.concept, inline: true })
-      //   .addFields({ name: "Test 3", value: "Maybe", inline: true })
       .setColor(_aspect.color || 0x777777);
 
     await interaction.reply({
@@ -33,7 +32,5 @@ module.exports = {
       files: [_file],
       embeds: [_aspectEmbed],
     });
-
-    // await interaction.reply({ content: bold(_shout), files: [file] });
   },
 };
