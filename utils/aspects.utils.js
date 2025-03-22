@@ -1,4 +1,4 @@
-const { ASPECT_NAMES } = require("../constants/aspects/core");
+// const { ASPECT_NAMES } = require("../constants/aspects/core");
 const { ASPECTS } = require("../constants/aspects/_combined");
 const { CHANCE_OF_STAINS } = require("../constants/aspects/rng.weights");
 const { weightedRandom } = require("./random.utils");
@@ -22,12 +22,6 @@ const getAspectIcon = (aspect) => {
 const getAspectNameArray = () => ASPECTS.map((aspect) => aspect.name);
 const getAspectWeightArray = () => ASPECTS.map((aspect) => aspect.weight);
 
-// get a Balanced version of aspects/powers - with exception for Histories
-const getDimmedAspectWeightArray = () =>
-  ASPECTS.map((aspect) => {
-    return aspect.name === ASPECT_NAMES.SECRET_HISTORIES ? 1 : 2;
-  });
-
 // Slashcommand: Do the weighted, random Vibe check for Aspects.
 const getRandomizedAspectsForUser = (amount = 3) => {
   const aspects = [];
@@ -41,10 +35,7 @@ const getRandomizedAspectsForUser = (amount = 3) => {
     if (count === amount - 1) {
       // CoinFlip! do we add stains or not?
       if (Math.random() < CHANCE_OF_STAINS) {
-        _name = weightedRandom(
-          getAspectNameArray(),
-          getDimmedAspectWeightArray()
-        );
+        _name = getRandomAspect().name;
       }
       count++;
     } else {
@@ -68,7 +59,6 @@ module.exports = {
   getAspectIcon,
   getAspectNameArray,
   getAspectWeightArray,
-  getDimmedAspectWeightArray,
   getAspectByName,
   getRandomizedAspectsForUser,
 };

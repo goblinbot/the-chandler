@@ -1,0 +1,50 @@
+// All names technically starts with 'The', but..
+const HOUR_NAMES = {
+  MOTH: "Moth",
+  WATCHMAN: "Door in the Eye",
+  VELVET: "Velvet",
+  MALACHITE: "Malachite",
+  THUNDERSKIN: "Thunderskin",
+  MOTHER_OF_ANTS: "Mother of Ants",
+  WITCH_AND_SISTER: "Witch-and-Sister",
+  COLONEL: "Colonel",
+  LIONSMITH: "Lionsmith",
+  ELEGIAST: "Elegiast",
+  BEACHCOMBER: "Beachcomber",
+  MENISCATE: "Meniscate",
+  SUN_IN_RAGS: "Sun-in-Rags",
+  HORNED_AXE: "Horned-Axe",
+  MADRUGAD: "Madrugad",
+  RED_GRAIL: "Red Grail",
+  WOLF_DIVIDED: "Wolf Divided",
+  VAGABOND: "Vagabond",
+  SISTER_AND_WITCH: "Sister-and-Witch",
+  FLOWERMAKER: "Flowermaker",
+  FORGE_OF_DAYS: "Forge of Days",
+  GIRIBRAGO: "Giribrago",
+  SNOW: "Snow",
+  BLACKBONE: "Blackbone",
+  RISING_SPIDER: "Rising Spider",
+  CROWNED_GROWTH: "Crowned Growth",
+  APPLEBRIGHT: "Applebright",
+  MARE: "Mare-in-the-Tree",
+  WITNESS: "Witness",
+  CHANDLER: "Chandler",
+  SEVEN_COILS: "Seven-Coils",
+  WHEEL: "Wheel",
+  FLINT: "Flint",
+  EGG: "Egg Unhatching",
+  TIDE: "Tide",
+  SUN_IN_SPLENDOUR: "Sun-in-Splendour",
+};
+
+const HOUR_ALT_NAMES = {
+  [HOUR_NAMES.WATCHMAN]: "Watchman",
+  [HOUR_NAMES.MALACHITE]: "Ring-Yew",
+  [HOUR_NAMES.VAGABOND]: "Centipede",
+};
+
+module.exports = {
+  HOUR_NAMES,
+  HOUR_ALT_NAMES,
+};
