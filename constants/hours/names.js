@@ -38,10 +38,25 @@ const HOUR_NAMES = {
   SUN_IN_SPLENDOUR: "Sun-in-Splendour",
 };
 
+// The <hour>, also called The <alt>
 const HOUR_ALT_NAMES = {
   [HOUR_NAMES.WATCHMAN]: "Watchman",
   [HOUR_NAMES.MALACHITE]: "Ring-Yew",
-  [HOUR_NAMES.VAGABOND]: "Centipede",
+  [HOUR_NAMES.VELVET]: "Moldywarp",
+  [HOUR_NAMES.THUNDERSKIN]: "Heart Relentless, The Vigilant Storm",
+  [HOUR_NAMES.MOTHER_OF_ANTS]: "Daughter of Venoms, The Key-Serpent",
+  [HOUR_NAMES.VAGABOND]:
+    "Centipede, The Pilgrim, The Sight-Thief, and many other names.",
+  [HOUR_NAMES.LIONSMITH]: "Golden General",
+  [HOUR_NAMES.ELEGIAST]: "Ivory Dove",
+  [HOUR_NAMES.BEACHCOMBER]: "Beach-Crow",
+  [HOUR_NAMES.MENISCATE]: "Mirror-Queen",
+  [HOUR_NAMES.RED_GRAIL]: "Great Mother",
+  [HOUR_NAMES.FLOWERMAKER]: "Lilyking",
+  [HOUR_NAMES.FORGE_OF_DAYS]: "Unburnt God",
+  [HOUR_NAMES.SEVEN_COILS]: "Seven-Coiled, Coil, The Wound",
+  [HOUR_NAMES.EGG]: "First Egg, or simply The Egg",
+  [HOUR_NAMES.SUN_IN_SPLENDOUR]: "True Sun",
 };
 
 module.exports = {

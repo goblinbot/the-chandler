@@ -17,7 +17,7 @@ const ASPECT_WEIGHTS = {
   [ASPECT_NAMES.WINTER]: 5,
 };
 
-const CHANCE_OF_STAINS = 0.6;
+const CHANCE_OF_STAINS = 0.7;
 
 module.exports = {
   ASPECT_WEIGHTS,

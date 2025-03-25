@@ -8,12 +8,13 @@ const {
   getRandomizedAspectsForUser,
 } = require("../../utils/aspects.utils");
 const Canvas = require("@napi-rs/canvas");
-const { createReplyFieldIfArtsMatch } = require("../../utils/arts.util");
+const { createReplyFieldIfArtsMatch } = require("../../utils/arts.utils");
 const { REPLY_CANVAS } = require("../../constants/canvas");
 const {
   createAspectHeaderFields,
   calculateCanvasCoords,
 } = require("../../utils/messagebuilder.utils");
+const { createHoursResultReplyField } = require("../../utils/hours.utils");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -62,6 +63,19 @@ module.exports = {
     if (_artsField) {
       _aspectEmbed.addFields(_artsField);
     }
+
+    // Time to call a Lantern Adept about potential Hours
+    const _hourField = createHoursResultReplyField(aspects);
+    if (_hourField) {
+      _aspectEmbed.addFields(_hourField);
+    } else {
+      _aspectEmbed.addFields({
+        name: "Your aspects did not draw the attention of a specific hour.",
+        value: "Maybe that's for the best. If you're an Obliviate, well done!",
+      });
+    }
+
+    // Weather?
 
     await interaction.reply({
       // content: "Vibe checking ..",
