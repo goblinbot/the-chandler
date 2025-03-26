@@ -15,6 +15,14 @@ const ASPECT_NAMES = {
   WINTER: "Winter",
 };
 
+const PRECURSOR_ASPECT_NAMES = {
+  EGG: "Egg",
+  FANG: "Fang",
+  FLINT: "Flint",
+  WHEEL: "Wheel",
+  TIDE: "Tide",
+};
+
 const ASPECT_TYPES = {
   PRINCIPLE: "Principle",
   POWER: "Power",
@@ -54,12 +62,12 @@ const RAW_ASPECTS = [
     color: 0xf97a89,
     subvertedBy: ASPECT_NAMES.GRAIL,
   },
-  {
-    name: ASPECT_NAMES.SECRET_HISTORIES,
-    icon: `aspectHistories.png`,
-    type: ASPECT_TYPES.PRINCIPLE,
-    color: 0xfe43f0,
-  },
+  // {
+  //   name: ASPECT_NAMES.SECRET_HISTORIES,
+  //   icon: `aspectHistories.png`,
+  //   type: ASPECT_TYPES.PRINCIPLE,
+  //   color: 0xfe43f0,
+  // },
   {
     name: ASPECT_NAMES.KNOCK,
     icon: `aspect${ASPECT_NAMES.KNOCK}.png`,
@@ -123,4 +131,5 @@ module.exports = {
   ASPECT_NAMES,
   ASPECT_TYPES,
   RAW_ASPECTS,
+  PRECURSOR_ASPECT_NAMES,
 };

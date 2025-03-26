@@ -1,6 +1,4 @@
 const { THE_HOURS } = require("../constants/hours/_combined");
-const { RANDOM_HOUR_INTROS } = require("../constants/hours/randomStrings");
-const { romanizeNumber } = require("./misc.utils");
 
 const findHoursMatchingAspects = (aspectsArray) => {
   const _major = aspectsArray[0];
@@ -77,59 +75,7 @@ const findHoursMatchingAspects = (aspectsArray) => {
 
 const numberToHourstamp = (num) => (num <= 9 ? `0${num}:00` : `${num}:00`);
 
-const createHoursResultReplyField = (aspects) => {
-  const hour = findHoursMatchingAspects(aspects);
-
-  if (hour) {
-    const _nameStrings = [];
-    const _valueStrings = [];
-
-    // intro before name; grab a random from the list
-    _nameStrings.push(
-      RANDOM_HOUR_INTROS[Math.floor(Math.random() * RANDOM_HOUR_INTROS.length)]
-    );
-
-    // Add name with/without altNames
-    _nameStrings.push(
-      hour.altName
-        ? `${hour.name}, also known as The ${hour.altName}`
-        : hour.name
-    );
-
-    _valueStrings.push(
-      hour.number !== null
-        ? `One of the Hours, associated with the hour ${romanizeNumber(hour.number)}, or ${numberToHourstamp(hour.number)}.`
-        : "One of the lost Hours."
-    );
-
-    _valueStrings.push(`Their main Aspect is ${hour.primaryAspect}.`);
-
-    if (hour.tarot) {
-      _valueStrings.push(
-        `This hour can be associated with the specific Tarot card: ${hour.tarot}.`
-      );
-    }
-
-    // Hour.Description
-
-    if (hour.requireMultipleAspects) {
-      _valueStrings.push(
-        `\nFor better or for worse, this Hour is an uncommon result.`
-      );
-    }
-
-    return {
-      name: _nameStrings.join(" "),
-      value: _valueStrings.join(" "),
-    };
-  } else {
-    return;
-  }
-};
-
 module.exports = {
   numberToHourstamp,
-  romanizeNumber,
   findHoursMatchingAspects,
-  createHoursResultReplyField,
 };

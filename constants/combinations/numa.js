@@ -14,6 +14,14 @@ const NUMA = {
   ],
 };
 
+const NUMA_ACTIONS = [
+  "You might try to host a party. Perhaps someone has tried to hold one in Numa at some point. Perhaps at several points. We'll never know, because no records of an attempt have survived. Numa.",
+  "You could write in a book that no-one reads. Include a truth so powerful that they, tentatively, believe themselves. You might write a New History altogether. Numa.",
+  "You have eaten. You have drunk. The meats were unfamiliar, the drinks unknown. A cloying taste lingers, your lips are stained with grey. An electric bulb flares like a marsh-light: Numa.",
+  "It was a work day. Afterwards you don't remember what work you performed, except in scents and sensations - leaf-mould, a rhythmic musical clicking like melodious castanets, soft blue flame like antique gaslight. And cold; you remember that where we went, it was cold. Numa.",
+];
+
 module.exports = {
   NUMA,
+  NUMA_ACTIONS,
 };

@@ -8,6 +8,7 @@ const checkIfNuma = (aspectsArray) => {
     const _matchingAspects = _aspectNames.filter((a) =>
       NUMA.aspects.includes(a)
     );
+
     return _matchingAspects.length >= _numaAspectRequirement;
   }
 

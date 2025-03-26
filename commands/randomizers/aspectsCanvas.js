@@ -8,13 +8,21 @@ const {
   getRandomizedAspectsForUser,
 } = require("../../utils/aspects.utils");
 const Canvas = require("@napi-rs/canvas");
-const { createReplyFieldIfArtsMatch } = require("../../utils/arts.utils");
 const { REPLY_CANVAS } = require("../../constants/canvas");
+const { calculateCanvasCoords } = require("../../utils/messagebuilder.utils");
+const { createHoursReplyFields } = require("../../messageBuilders/hours.msg");
+const { createOptionalArtsField } = require("../../messageBuilders/arts.msg");
+const { checkIfNuma } = require("../../utils/numa.utils");
+const {
+  createNumaIntro,
+  createNumaAction,
+  createNumaEmotionField,
+} = require("../../messageBuilders/numa.msg");
+const { createEmotionField } = require("../../messageBuilders/misc.msg");
 const {
   createAspectHeaderFields,
-  calculateCanvasCoords,
-} = require("../../utils/messagebuilder.utils");
-const { createHoursResultReplyField } = require("../../utils/hours.utils");
+  createAspectReplyFields,
+} = require("../../messageBuilders/aspects.msg");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -24,6 +32,7 @@ module.exports = {
   async execute(interaction) {
     // First, get them Aspects!
     const aspects = await getRandomizedAspectsForUser(3);
+
     const canvas = await Canvas.createCanvas(
       REPLY_CANVAS.width,
       REPLY_CANVAS.height
@@ -53,29 +62,41 @@ module.exports = {
     const _aspectEmbed = new EmbedBuilder()
       .setImage(`attachment://combinedAspects.png`)
       .setColor(aspects[0].color || 0x777777)
-      .addFields(createAspectHeaderFields(aspects));
+      .setTitle("Your aspects are:");
 
-    // Add "matching arts" if major/minor are of the same arts
-    const _artsField = createReplyFieldIfArtsMatch(
-      aspects[0].name,
-      aspects[1].name
-    );
-    if (_artsField) {
-      _aspectEmbed.addFields(_artsField);
-    }
+    const additionalFields = [];
 
-    // Time to call a Lantern Adept about potential Hours
-    const _hourField = createHoursResultReplyField(aspects);
-    if (_hourField) {
-      _aspectEmbed.addFields(_hourField);
+    const _numa = checkIfNuma(aspects);
+
+    // Rare chance; Numa overrules regular responses.
+    if (_numa) {
+      _aspectEmbed.setTitle("Numa.");
+      additionalFields.push(createAspectHeaderFields(aspects));
+      additionalFields.push(createNumaIntro());
+      additionalFields.push(createNumaAction());
+      additionalFields.push(createNumaEmotionField());
     } else {
-      _aspectEmbed.addFields({
-        name: "Your aspects did not draw the attention of a specific hour.",
-        value: "Maybe that's for the best. If you're an Obliviate, well done!",
-      });
+      // Normal non-Numa response.
+      createAspectReplyFields(aspects).forEach((f) => additionalFields.push(f));
+      additionalFields.push(createHoursReplyFields(aspects));
+      additionalFields.push(createEmotionField());
     }
 
     // Weather?
+
+    // Remove null/undefined, then .map:
+    additionalFields
+      .filter((n) => n)
+      .map((msg) => {
+        if (msg) _aspectEmbed.addFields(msg);
+      });
+
+    const _optionalFooter = createOptionalArtsField(aspects);
+    if (_optionalFooter) {
+      _aspectEmbed.setFooter({
+        text: `${_optionalFooter.name}\n${_optionalFooter.value}`,
+      });
+    }
 
     await interaction.reply({
       // content: "Vibe checking ..",

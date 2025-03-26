@@ -6,7 +6,9 @@ const {
   HOUR_ASPECTS,
   HOUR_PRIMARY_ASPECTS,
   HOURS_REQUIRING_AT_LEAST_TWO,
+  HOUR_PRECURSOR_ASPECTS,
 } = require("./aspects");
+const { HOUR_DESCRIPTIONS } = require("./descriptions");
 
 const THE_HOURS = [];
 
@@ -28,6 +30,14 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
 
     if (HOUR_TAROT[name]) {
       _hour.tarot = HOUR_TAROT[name];
+    }
+
+    if (HOUR_PRECURSOR_ASPECTS[name]) {
+      _hour.precursorAspect = HOUR_PRECURSOR_ASPECTS[name];
+    }
+
+    if (HOUR_DESCRIPTIONS[name]) {
+      _hour.description = HOUR_DESCRIPTIONS[name];
     }
 
     if (HOURS_REQUIRING_AT_LEAST_TWO.includes(name)) {

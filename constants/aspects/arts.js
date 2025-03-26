@@ -7,15 +7,15 @@ const { ASPECT_NAMES } = require("./core");
 // Unregarded Grail,Heart,Moth,History
 
 const ART_MATCH_LINES = [
-  "Be wary of intricate woven dreams, whose silken strands are ",
-  "Steps upon your stairs of wisdom may include ",
-  "Willing or Unwilling - Within or Without - these are the arts of ",
-  "Some words are spelt correctly only when the proper ink is used:\n",
+  "Be wary of intricate woven dreams, whose silken strands are",
+  "Steps upon your stairs of wisdom may include",
+  "Willing or Unwilling - Within or Without - these are the arts of",
+  "Some words are spelt correctly only when the proper ink is used:",
   // "Memories from the labyrinthine mists have power. This is what you'll recall:\n",
-  "These are the sights you'll see:\n",
-  "Gervinus van Lauren was notoriously fond of these as well:\n",
-  "Adepts avoid these answers when asked 'What May Be Lost?'\n",
-  "Wheter afflicted by, or mastering them on purpose - arts have power in:\n",
+  "These are the sights you'll see:",
+  "Gervinus van Lauren was notoriously fond of these as well:",
+  "Adepts avoid these answers when asked 'What May Be Lost?':",
+  "Wheter afflicted by, or mastering them on purpose - arts have power in:",
   // "when the year loses its way, when Time is a river and Memory a winged bird, keep the following close to heart:\n",
   // "Moldywarp keeps her crowns in the moss and her feet in the dirt and the trees locked jaw-tight. Moldywarp has these warnings for you:\n",
 ];
