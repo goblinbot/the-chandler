@@ -1,6 +1,10 @@
 # Config/discord.js
 config.json
 
+# hosting specific
+_build.zip
+Archive.zip
+
 # Logs
 logs
 *.log

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "npm run deploy-commands && npm run start",
+    "start-dev": "npm run deploy && npm run start",
     "start": "node .",
-    "deploy-commands": "node deploy-commands"
+    "deploy": "node deploy-commands"
   },
   "keywords": [
     "the",
