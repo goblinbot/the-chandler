@@ -1,12 +1,11 @@
 {
   "name": "the-chandler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cultist aura discord bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "npm run deploy && npm run start",
-    "start": "node .",
+    "start": "npm run deploy && node .",
     "deploy": "node deploy-commands"
   },
   "keywords": [
