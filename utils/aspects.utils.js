@@ -1,11 +1,9 @@
 // const { ASPECT_NAMES } = require("../constants/aspects/core");
 const { ASPECTS } = require("../constants/aspects/_combined");
 const { CHANCE_OF_STAINS } = require("../constants/aspects/rng.weights");
-const { weightedRandom } = require("./random.utils");
+const { weightedRandom, randomFromArray } = require("./random.utils");
 
-const getRandomAspect = () => {
-  return ASPECTS[Math.floor(Math.random() * ASPECTS.length)];
-};
+const getRandomAspect = () => randomFromArray(ASPECTS);
 
 const getAspectByName = (aspectName) => {
   return ASPECTS.find((asp) => asp.name === aspectName);

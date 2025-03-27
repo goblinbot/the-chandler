@@ -44,6 +44,17 @@ const RAW_EMOTIONS = {
     value:
       "Maybe you should paint. You could paint those sights half-remembered from your dreams, or a fellow person! Something to remember them by, perhaps.",
   },
+  CORRIVALITY: {
+    name: "Corrivality",
+    value:
+      "You're beginning to notice patterns of contention in the world - the struggle of trees with wind, flames with smoke, rivers with the earth. Crowds are a constant skirmishing of motives. It's beautiful.",
+  },
+  OPPORTUNITY: {
+    prefix: "have a ",
+    name: "Opportunity",
+    value:
+      "Explore. Take risks. You won't always know what to do next. Keep expirementing, and you'll master it.",
+  },
   AWARENESS_APPETITE: {
     name: "An Awareness of Appetite",
     prefix: "feel: ",

@@ -3,6 +3,7 @@ const {
   findArtsContainingAspect,
   findMatchingArtsType,
 } = require("../utils/arts.utils");
+const { randomFromArray } = require("../utils/random.utils");
 
 const createOptionalArtsField = (aspects) => {
   const _major = aspects[0].name;
@@ -17,9 +18,7 @@ const createOptionalArtsField = (aspects) => {
       const _matchingArts = findMatchingArtsType(majorArts, minorArts);
 
       if (_matchingArts) {
-        const _randomMatchLine =
-          ART_MATCH_LINES[Math.floor(Math.random() * ART_MATCH_LINES.length)];
-
+        const _randomMatchLine = randomFromArray(ART_MATCH_LINES);
         const _keywords = _matchingArts.keywords
           .join(", ")
           .replace(/, ([^,]*)$/, " & $1");

@@ -39,6 +39,9 @@ const weightedRandom = (items, weights) => {
   }
 };
 
+const randomFromArray = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
 module.exports = {
   weightedRandom,
+  randomFromArray,
 };

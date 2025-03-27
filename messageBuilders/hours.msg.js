@@ -4,6 +4,7 @@ const {
   findHoursMatchingAspects,
   numberToHourstamp,
 } = require("../utils/hours.utils");
+const { randomFromArray } = require("../utils/random.utils");
 
 const createHoursReplyFields = (aspects) => {
   // Time to call a Lantern Adept about potential Hours
@@ -14,9 +15,7 @@ const createHoursReplyFields = (aspects) => {
     const _valueStrings = [];
 
     // intro before name; grab a random from the list
-    _nameStrings.push(
-      RANDOM_HOUR_INTROS[Math.floor(Math.random() * RANDOM_HOUR_INTROS.length)]
-    );
+    _nameStrings.push(randomFromArray(RANDOM_HOUR_INTROS));
 
     // Add name with/without altNames
     _nameStrings.push(

@@ -1,5 +1,6 @@
 const { RAW_EMOTIONS } = require("../constants/combinations/emotions");
 const { NUMA_ACTIONS } = require("../constants/combinations/numa");
+const { randomFromArray } = require("../utils/random.utils");
 
 const createNumaIntro = () => {
   return {
@@ -10,7 +11,7 @@ const createNumaIntro = () => {
 };
 
 const createNumaAction = () => {
-  const _action = NUMA_ACTIONS[Math.floor(Math.random() * NUMA_ACTIONS.length)];
+  const _action = randomFromArray(NUMA_ACTIONS);
 
   return {
     name: "What happened?",
@@ -22,7 +23,7 @@ const createNumaEmotionField = () => {
   const _emotion = RAW_EMOTIONS.NUMA;
   const _prefix = _emotion.prefix || "are experiencing: ";
   const value = Array.isArray(_emotion.value)
-    ? _emotion.value[Math.floor(Math.random() * _emotion.value.length)]
+    ? randomFromArray(_emotion.value)
     : _emotion.value;
 
   return {
