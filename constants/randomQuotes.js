@@ -22,7 +22,7 @@ const RANDOM_QUOTES = [
   "Secrets are soft; night is softer still; the sea speaks. It is not always wise to listen.",
   "Sunset. Time to move.",
   "You can stay,' the Prior tells me. 'But I won't take your money. It's the Devil who is coming for you. There's no sanctuary for you here, or anywhere on the face of the earth.",
-  "he book contains diagrams. The diagrams are not pleasant to look upon.",
+  "The book contains diagrams. The diagrams are not pleasant to look upon.",
   "Clovette wields her joy like a hammer.",
   "When I wake, my face is wracked with tears of joy. That light! Cleaner than anything I see in waking life.",
   "Some words can only be spelled correctly with the proper ink.",
