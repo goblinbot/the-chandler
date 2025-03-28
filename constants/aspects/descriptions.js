@@ -33,7 +33,7 @@ const ASPECT_DESCRIPTIONS = {
     short:
       "Knock is the principle of openings. Any and all openings, including wounds.",
     expanded:
-      "It opens doors and unseams barriers. Knock is associated with locksmiths, burglars and oracles. Its followers tend to have intense dreams, visions of other places, perceptiveness, and do not always retain a connection to reality. Every rituals requires Knock to work.",
+      "It opens doors and unseams barriers. Knock is associated with locksmiths, burglars and oracles. Its followers tend to have intense dreams, visions of other places, perceptiveness, and do not always retain a connection to reality. All rituals requires Knock to work.",
   },
   [ASPECT_NAMES.LANTERN]: {
     short:
@@ -45,7 +45,7 @@ const ASPECT_DESCRIPTIONS = {
     short:
       "Moth is the principle of Chaos. Nature, Yearning for change, unreason and Whimsy.",
     expanded:
-      "It's the principle that seeks to know, and as such it is curiousity. It is associated with barbers and the shedding of unnecessary things. Those chaotic beings of moth are known for stealth, erratic behavior, and agendas known only to themselves.",
+      "It's the principle that seeks to know, and as such it is curiosity. It is associated with barbers and the shedding of unnecessary things. Those chaotic beings of moth are known for stealth, erratic behavior, and agendas known only to themselves.",
   },
   [ASPECT_NAMES.MOON]: {
     short:
@@ -57,11 +57,11 @@ const ASPECT_DESCRIPTIONS = {
     short:
       "Nectar is represents the forces of Nature, Seasons and the Wild. Long ago, some called it Blood.",
     expanded:
-      "Nectar as a power overlaps a fair bit with more standard principles; It is untamed like Moth. It is invigorating like Heart. It is intoxicating like Grail. It is commonly associated not only with plants, tees and wildlife, but also sacrifice, sustenance, and life. Usually in a more primordial fashion.",
+      "Nectar as a power overlaps a fair bit with more standard principles; It is untamed like Moth. It is invigorating like Heart. It is intoxicating like Grail. It is commonly associated not only with plants, tees and wildlife, but also sacrifice, sustenance, and life. Usually, in a more primordial fashion.",
   },
   [ASPECT_NAMES.ROSE]: {
     short:
-      "Rose is on the Powers of the invisible arts. It embodies the search for new horizons, experiences, and possibilities.",
+      "Rose is one the Powers of the invisible arts. It embodies the search for new horizons, experiences, and possibilities.",
     expanded:
       "Rose encompasseth all. To wield Rose is to always know where you are, where you're going, and how to get there.",
   },
@@ -75,13 +75,13 @@ const ASPECT_DESCRIPTIONS = {
     short:
       "Sky is the old power of the lower heavens, presiding over music, weather, mathematics, order - and flight.",
     expanded:
-      "Sky represents the order and structure of the universe as a thing of beauty and harmony. A gentle aspect that can be apreciated through song and study. Sky will make your hear clear: a gust of wind, some sunshine, a walk outside. It is a symbol of freedom.",
+      "Sky represents the order and structure of the universe as a thing of beauty and harmony. A gentle aspect that can be appreciated through song and study. Sky will make your hear clear: a gust of wind, some sunshine, a walk outside. It is a symbol of freedom.",
   },
   [ASPECT_NAMES.WINTER]: {
     short:
       "... [Winter is the principle of Endings, Cold, Death, Mourning, Beauty - and most importantly - Silence.]",
     expanded:
-      "It's a solemn principle. The Ragged Lore sticks to those things that are not quite dead, and controversially, can be charactertized as a kindness. Mercy. The ones who are aligned with Winter can be many things, but almost always - they will be silent. And patient.",
+      "It's a solemn principle. The Ragged Lore sticks to those things that are not quite dead, and controversially, can be characterized as a kindness. Mercy. The ones who are aligned with Winter can be many things, but almost always - they will be silent. And patient.",
   },
 };
 
