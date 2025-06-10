@@ -57,7 +57,7 @@ const ASPECT_DESCRIPTIONS = {
     short:
       "Nectar is represents the forces of Nature, Seasons and the Wild. Long ago, some called it Blood.",
     expanded:
-      "Nectar as a power overlaps a fair bit with more standard principles; It is untamed like Moth. It is invigorating like Heart. It is intoxicating like Grail. It is commonly associated not only with plants, tees and wildlife, but also sacrifice, sustenance, and life. Usually, in a more primordial fashion.",
+      "Nectar as a power overlaps a fair bit with more standard principles; It is untamed like Moth. It is invigorating like Heart. It is intoxicating like Grail. It is commonly associated not only with plants, trees and wildlife, but also sacrifice, sustenance, and life. Usually, in a more primordial fashion.",
   },
   [ASPECT_NAMES.ROSE]: {
     short:

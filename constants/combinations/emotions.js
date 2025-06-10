@@ -176,8 +176,10 @@ const RAW_EMOTIONS = {
     name: "Mists and Silence",
     prefix: "find yourself in ",
     value: [
+      "In the office silence; between the cubicles, mist. At your desk is a hooded figure, coding in languages unknown. It does not acknowledge your presence. Numa.",
       "Mist presses against the walls and stroke the flagstones with its fingers. A drum taps an irregular rhythm somewhere below the streets. Numa.",
       "The streets are quiet. The signs are written in a language nobody can read. No-one comes when knocking doors. Numa.",
+      "The mists are thick, but as you approached, You saw lamplight in the Rector's study. Now, though, You see the windows are shuttered, and the light seen before was a fugitive wisp, like a lost star. Numa.",
       "The local inn is crowded with Numa's heralds and pilgrims. They will be gone by morning. Until then you could offer your services for payment. You might regret it. Numa.",
       "The local smithy's fire still glows, but through the windows one sees a gaunt, eyeless shape working the bellows. There is no sign of the smith. You know better than to interrupt this visitor. Numa.",
       "Post-office. The telephone-line crackles. The mists surges and retreats. From far away - maybe above - one hears the post-mistress' voice crying out lamentations. But there is no sign of her here. Numa.",
