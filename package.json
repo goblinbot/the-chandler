@@ -1,6 +1,6 @@
 {
   "name": "the-chandler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cultist aura discord bot",
   "main": "index.js",
   "scripts": {

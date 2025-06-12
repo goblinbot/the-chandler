@@ -71,6 +71,7 @@ module.exports = {
     // Rare chance; Numa overrules regular responses.
     if (_numa) {
       _aspectEmbed.setTitle("Numa.");
+      _aspectEmbed.setThumbnail('https://static.wikia.nocookie.net/book-of-hours/images/b/be/Season-Numa.png');
       additionalFields.push(createAspectHeaderFields(aspects));
       additionalFields.push(createNumaIntro());
       additionalFields.push(createNumaAction());
