@@ -6,7 +6,7 @@ const createNumaIntro = () => {
   return {
     name: "You are at the threshold of Numa.",
     value:
-      "Numa, shortest season, labyrinth season, when the year loses its way, when Time is a river and Memory a winged bird. In Numa, oddities ripen in the gardens of the Isle - unexpected visitors arrive - memory departs. One in Nine seasons might be Numa, but Numa is the vagabond, Numa has no heralds. Numa might arrive twice in one year - or four yers might pass without the touch of its mists.",
+      "Numa, shortest season, labyrinth season, when the year loses its way, when Time is a river and Memory a winged bird. In Numa, oddities ripen in the gardens of the Isle - unexpected visitors arrive - memory departs. One in Nine seasons might be Numa, but Numa is the vagabond, Numa has no heralds. Numa might arrive twice in one year - or four years might pass without the touch of its mists.",
   };
 };
 
