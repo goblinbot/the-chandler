@@ -1,16 +1,13 @@
 const { REST, Routes } = require("discord.js");
 /* guildId, */
-const { clientId, token } = require("./config.json");
+const { guildId, clientId, token } = require("./config.json");
 const fs = require("node:fs");
 const path = require("node:path");
 
-// ----
-//
-// HOW TO GLOBAL COMMANDS: https://discordjs.guide/creating-your-bot/slash-commands.html#individual-command-files
-//
-// ----
-
 const commands = [];
+const TEST_COMMANDS = [
+  'hour', 'weather'
+];
 // Grab all the command folders from the commands directory you created earlier
 
 const foldersPath = path.join(__dirname, "commands");
@@ -50,19 +47,27 @@ const rest = new REST().setToken(token);
       `Started refreshing ${commands.length} application (/) commands.`
     );
 
-    // The put method is used to fully refresh all commands in the guild with the current set
-    // const data = await rest.put(
-    //   Routes.applicationGuildCommands(clientId, guildId),
-    //   { body: commands }
-    // );
+    const _guildCommands = commands.filter((c) => TEST_COMMANDS.includes(c.name));
+    const _globalCommands = commands.filter((c) => !TEST_COMMANDS.includes(c.name));
+
+    let _guildData;
+    let _globalData;
+
+    if (_guildCommands && _guildCommands.length > 0) {
+      // The put method is used to fully refresh all commands in the guild with the current set
+      _guildData = await rest.put(
+        Routes.applicationGuildCommands(clientId, guildId),
+        { body: _guildCommands }
+      );
+    }
 
     // Put method to fully refresh commands (global) instead of guild
-    const data = await rest.put(Routes.applicationCommands(clientId), {
-      body: commands,
+    _globalData = await rest.put(Routes.applicationCommands(clientId), {
+      body: _globalCommands,
     });
 
     console.log(
-      `Successfully reloaded ${data.length} application (/) commands.`
+      `Successfully reloaded ${_guildData.length + _globalData.length || 0} application (/) commands; Guild: ${_guildData.length || 0}, Global: ${_globalData.length || 0}`
     );
   } catch (error) {
     // And of course, make sure you catch and log any errors!

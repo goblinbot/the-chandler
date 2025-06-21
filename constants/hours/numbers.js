@@ -43,6 +43,12 @@ const HOUR_NUMBERS = {
   [HOUR_NAMES.SUN_IN_SPLENDOUR]: null,
 };
 
+const HOUR_WEIGHTS = {
+  TAROT: 5,
+  NON_TAROT: 3,
+};
+
 module.exports = {
   HOUR_NUMBERS,
+  HOUR_WEIGHTS,
 };

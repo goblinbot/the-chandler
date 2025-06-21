@@ -5,7 +5,6 @@ const RANDOM_HOUR_INTROS = [
   "Which invokes",
   "The bureau of warns of",
   "Hershault wrote of",
-  //   "Whenever these principles are implicated, usually arises ",
   "You might be protected by the powers of",
   "You wander under the gaze of",
 ];

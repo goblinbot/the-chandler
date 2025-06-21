@@ -1,14 +1,16 @@
 const { ASPECT_COMBINATION_TYPES } = require("../combinations/_types");
 const { HOUR_NAMES, HOUR_ALT_NAMES } = require("./names");
 const { HOUR_NUMBERS } = require("./numbers");
-const { HOUR_TAROT } = require("./tarot");
+const { HOUR_TAROT, TAROT_QUICK_READINGS } = require("./tarot");
 const {
   HOUR_ASPECTS,
   HOUR_PRIMARY_ASPECTS,
   HOURS_REQUIRING_AT_LEAST_TWO,
   HOUR_PRECURSOR_ASPECTS,
 } = require("./aspects");
-const { HOUR_DESCRIPTIONS } = require("./descriptions");
+const { HOUR_DESCRIPTIONS, HOUR_SINGLETON_DOMAINS, HOUR_DOMAINS } = require("./descriptions");
+const { HOUR_MATERIALS } = require("./materials");
+const { HOUR_IMAGES } = require("./images");
 
 const THE_HOURS = [];
 
@@ -22,23 +24,19 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
       number: HOUR_NUMBERS[name],
       primaryAspect: HOUR_PRIMARY_ASPECTS[name],
       aspects: HOUR_ASPECTS[name],
+      image: HOUR_IMAGES[name],
+      description: HOUR_DESCRIPTIONS[name],
+      domains: HOUR_DOMAINS[name],
     };
 
-    if (HOUR_ALT_NAMES[name]) {
-      _hour.altName = `The ${HOUR_ALT_NAMES[name]}`;
-    }
+    if (HOUR_ALT_NAMES[name]) _hour.altName = `The ${HOUR_ALT_NAMES[name]}`;
+    if (HOUR_TAROT[name]) _hour.tarot = HOUR_TAROT[name];
+    if (TAROT_QUICK_READINGS[name]) _hour.tarotRead = TAROT_QUICK_READINGS[name];
+    if (HOUR_PRECURSOR_ASPECTS[name]) _hour.precursorAspect = HOUR_PRECURSOR_ASPECTS[name];
+    if (HOUR_DESCRIPTIONS[name]) _hour.description = HOUR_DESCRIPTIONS[name];
+    if (HOUR_MATERIALS[name]) _hour.materials = HOUR_MATERIALS[name];
+    if (HOUR_SINGLETON_DOMAINS[name]) _hour.singletonDescription = true;
 
-    if (HOUR_TAROT[name]) {
-      _hour.tarot = HOUR_TAROT[name];
-    }
-
-    if (HOUR_PRECURSOR_ASPECTS[name]) {
-      _hour.precursorAspect = HOUR_PRECURSOR_ASPECTS[name];
-    }
-
-    if (HOUR_DESCRIPTIONS[name]) {
-      _hour.description = HOUR_DESCRIPTIONS[name];
-    }
 
     if (HOURS_REQUIRING_AT_LEAST_TWO.includes(name)) {
       _hour.requireMultipleAspects = true;

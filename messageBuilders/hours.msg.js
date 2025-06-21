@@ -50,11 +50,6 @@ const createHoursReplyFields = (aspects) => {
       );
     }
 
-    // Maybe only show hour.description in a "pull Hour Card" tarot?
-    // if (hour.description) {
-    //   _valueStrings.push(`\n\n${hour.description}`);
-    // }
-
     return {
       name: _nameStrings.join(" "),
       value: _valueStrings.join(" "),
