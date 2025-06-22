@@ -1,4 +1,5 @@
-const { THE_HOURS } = require("../constants/hours/_combined");
+const { THE_HOURS, THE_HOURS_OBJECT_LIST } = require("../constants/hours/_combined");
+const { weightedRandom } = require("./random.utils");
 
 const findHoursMatchingAspects = (aspectsArray) => {
   const _major = aspectsArray[0];
@@ -73,9 +74,17 @@ const findHoursMatchingAspects = (aspectsArray) => {
   }
 };
 
+const getHourNameArray = () => THE_HOURS.map((h) => h.key);
+const getHourWeightArray = () => THE_HOURS.map((h) => h.weight);
+const getWeightedRandomHour = () => {
+  const _randomHour = weightedRandom(getHourNameArray(), getHourWeightArray());
+  return THE_HOURS_OBJECT_LIST[_randomHour];
+}
+
 const numberToHourstamp = (num) => (num <= 9 ? `0${num}:00` : `${num}:00`);
 
 module.exports = {
   numberToHourstamp,
   findHoursMatchingAspects,
+  getWeightedRandomHour,
 };

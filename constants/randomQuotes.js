@@ -1,6 +1,7 @@
 const RANDOM_QUOTES = [
   "Break a thing, and you have fragments. Break those fragments, and you have dust. Break the dust, and then break what remains. Here is fire.",
   "I knew a man who captured moths in a bell-jar. On nights like this, he would release them one by one to die in the candle.",
+  "Once again, I dream of a glow beneath the filthy skin of the world. The light through the black wood. The pale door.",
   "The Wheel still turns in the house of the Moon.",
   "Not every Door is a Wound, but every Wound is a Door.",
   "In the forests of the first continent, our ancestors cursed themselves with their own god.",

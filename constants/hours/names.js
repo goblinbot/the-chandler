@@ -57,7 +57,7 @@ const HOUR_ALT_NAMES = {
   [HOUR_NAMES.FORGE_OF_DAYS]: "Unburnt God",
   [HOUR_NAMES.SEVEN_COILS]: "Seven-Coiled, Coil, The Wound",
   [HOUR_NAMES.EGG]: "First Egg, or simply The Egg",
-  [HOUR_NAMES.GIRIBRAGO]: "Wound, The Leak",
+  [HOUR_NAMES.GIRIBRAGO]: "Wound, The Leak, The Shard, The Diamond",
   [HOUR_NAMES.SUN_IN_SPLENDOUR]: "True Sun",
 };
 
