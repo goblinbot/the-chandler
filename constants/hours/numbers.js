@@ -44,7 +44,7 @@ const HOUR_NUMBERS = {
 };
 
 const HOUR_WEIGHTS = {
-  TAROT: 8,
+  TAROT: 6,
   NON_TAROT: 2,
 };
 

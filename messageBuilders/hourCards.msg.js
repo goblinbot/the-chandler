@@ -9,14 +9,21 @@ const createTarotReplyFields = (hour) => {
             name: `Major Arcana; this Hour as '${hour.tarot}'.`,
             value: `Quick Themes: ${hour.tarotRead}`,
         });
+
+        if (hour.tarotDescription) {
+            _replyFields.push({
+                name: '',
+                value: hour.tarotDescription,
+            });
+        }
+    } else {
+        _replyFields.push({
+            name: "Major Arcana",
+            value: "This Hour does not have a tarot equivalent.\nFor better or for worse, this is an uncommon result."
+        })
     }
 
-    if (hour.tarotDescription) {
-        _replyFields.push({
-            name: '',
-            value: hour.tarotDescription,
-        });
-    }
+
 
     return _replyFields;
 }

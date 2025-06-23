@@ -7,18 +7,22 @@ const {
 const { getWeightedRandomHour } = require("../../utils/hours.utils");
 const { getAspectByName } = require("../../utils/aspects.utils");
 const { createHourDomainReplyField, createTarotReplyFields, getHourHourString, createAltNameReplyField } = require("../../messageBuilders/hourCards.msg");
+// const { THE_HOURS } = require("../../constants/hours/_combined");
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("hour")
+        // .addStringOption((option) => option.setName('number').setDescription('of the hour'))
         .setDescription("Draw a card from the Tarot of Hours"),
     async execute(interaction) {
 
+        // const hour = interaction.options.getString('number') ? THE_HOURS[interaction.options.getString('number')] : getWeightedRandomHour();
         const hour = getWeightedRandomHour();
         const { color } = getAspectByName(hour.primaryAspect);
         const _embed = new EmbedBuilder()
             .setColor(color)
             .setTitle(`Your Hour is: ${hour.name}`);
+
 
         const file = new AttachmentBuilder(`${appRoot}/image/hours/${hour.image}`);
         _embed.setImage(`attachment://${hour.image}`);
@@ -37,14 +41,6 @@ module.exports = {
 
         // Tarot
         additionalFields.push(createTarotReplyFields(hour));
-
-        // // Material bonus
-        // if (hour.materials) {
-        //     additionalFields.push({
-        //         name: '',
-        //         value: `Associated ${hour.materials.type}: ${hour.materials.name}`
-        //     })
-        // }
 
         // Remove null/undefined, then .map:
         additionalFields

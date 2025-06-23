@@ -6,7 +6,7 @@ const path = require("node:path");
 
 const commands = [];
 const TEST_COMMANDS = [
-  'hour', 'weather'
+  'weather'
 ];
 // Grab all the command folders from the commands directory you created earlier
 
