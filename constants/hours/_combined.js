@@ -1,7 +1,7 @@
 const { ASPECT_COMBINATION_TYPES } = require("../combinations/_types");
 const { HOUR_NAMES, HOUR_ALT_NAMES } = require("./names");
 const { HOUR_NUMBERS, HOUR_WEIGHTS } = require("./numbers");
-const { HOUR_TAROT, TAROT_QUICK_READINGS } = require("./tarot");
+const { HOUR_TAROT, TAROT_QUICK_READINGS, HOUR_TAROT_DESCRIPTIONS } = require("./tarot");
 const {
   HOUR_ASPECTS,
   HOUR_PRIMARY_ASPECTS,
@@ -32,6 +32,7 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
 
     if (HOUR_ALT_NAMES[name]) _hour.altName = `The ${HOUR_ALT_NAMES[name]}`;
     if (HOUR_TAROT[name]) _hour.tarot = HOUR_TAROT[name];
+    if (HOUR_TAROT_DESCRIPTIONS[name]) _hour.tarotDescription = HOUR_TAROT_DESCRIPTIONS[name];
     if (TAROT_QUICK_READINGS[name]) _hour.tarotRead = TAROT_QUICK_READINGS[name];
     if (HOUR_PRECURSOR_ASPECTS[name]) _hour.precursorAspect = HOUR_PRECURSOR_ASPECTS[name];
     if (HOUR_DESCRIPTIONS[name]) _hour.description = HOUR_DESCRIPTIONS[name];

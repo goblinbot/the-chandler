@@ -25,6 +25,31 @@ const HOUR_TAROT = {
   [HOUR_NAMES.GIRIBRAGO]: "The World",
 };
 
+const HOUR_TAROT_DESCRIPTIONS = {
+  [HOUR_NAMES.MOTH]: "The Fool is an eager, earnest face about to set out on his journey through the world. Traditional depictions of the Fool show him daydreaming, walking carelessly towards a cliff. A symbol of recklessness and naivete.\nThe Moth, likewise, is an Hour that recognises change and the new starts from embracing change. To change is not always wise nor safe nor easy, but to Moth, always meaningful.",
+  [HOUR_NAMES.WATCHMAN]: "The Magician is a herald of inspiration and potential, with mastery over both the material and spiritual worlds. The Watchman is a revelator. He uncovers all secrets and forces us into the light of knowing, regardless of whether or not knowing is ultimately good for us. He bestows his inspirations/revelations without mercy .",
+  [HOUR_NAMES.VELVET]: "The High Priestess signifies intuition, mystery, and unconscious understanding. When we listen to her, we prioritise the instinctive and innate over the analytical and intellectual. The Velvet exacerbates several of her natures. She buries secrets so that mortals might not use (or misuse) them.",
+  [HOUR_NAMES.MALACHITE]: "The Empress is a card that promises abundance, creativity, and femininity. Traditional depictions of this card show a crowned woman upon a throne in the midst of a lush wilderness, establishing both her power and connection to nature. The Malachite most strongly embodies the Empress's natural aspects, being a power of Wood and nature's bounty.",
+  [HOUR_NAMES.WITCH_AND_SISTER]: "The Lovers engender attraction, choice, and of course, love. The card can be a sign of a great bond that strengthens those in it. The Witch-and-Sister emphasise the attraction/union promised by this card, to both positive and negative impact. Their identity as the Lovers can signal strong union, but also codependancy and toxicity.",
+  [HOUR_NAMES.COLONEL]: `The Chariot promises victory, determination, and supreme focus. The Colonel darkly elaborates on the ethos of the Chariot, for he insists: “Cunning is the root of victory. Experience is the root of cunning. There can be no experience without suffering.”`,
+  [HOUR_NAMES.LIONSMITH]: "Strength promises confidence, bravery, and compassion in the face of adversity. In traditional tarot this card usually doesn't signify actual physical brawn. The Lionsmith absolutely does. He calls on us to become our strongest selves by striving against the enemies and structures that repress us.",
+  [HOUR_NAMES.ELEGIAST]: "The Hermit is characterised by his solitary nature. The Elegiast as the Hermit will advise you to quietly reflect not only on your own inner voice, but on the words the departed might have to offer you. Find a quiet place. Remember a parent, a friend, or even a pet. The absent speak - you need only listen.",
+  [HOUR_NAMES.THUNDERSKIN]: "The Emperor is a card that embodies leadership, stability, and paternal authority. In the traditional tarot, the Emperor bears a crown, sceptre, and royal orb that visually cement his claim to rulership. The Thunderskin stresses the protective/relentless traits of the Emperor. Self-sacrificial, he \"beats to proect the skin of the world\" and is called upon to heal wounds/vanquish curses.",
+  [HOUR_NAMES.BEACHCOMBER]: "The Wheel of Fortune signifies time, luck, karma, and destiny. The beachcomber is a cosmic opportunist. When we invoke him as the Wheel of Fortune, there is likely some great profit or windfall at hand - but are you the oppoertunist, or the opportunity? The beachcomber asks us to adapt to the winds of fate.",
+  [HOUR_NAMES.MENISCATE]: "Justice accords us balance, fairness, and the prudent rule of law. The Meniscate is a power who favours balance - she bears no sword nor scales - only a mirror, which she offers to those who come before her. The self is often the most critical, exacting judge of one's actions and shortcomings. If you cannot meet your eyes in a mirror, contemplate what you have done, deserve, and how you might change.",
+  [HOUR_NAMES.SUN_IN_RAGS]: "The Hanged Man is a figure of willful sacrifice, surrendering himself to attain new perspective and wisdom. As the heir-apparent of the dead Sun, the Sun-in-Rags is a sacrificial figure, and is literally divided to show this. See the world differently. And when the blood drips down into your eyes, see the beauty in its colours.",
+  [HOUR_NAMES.HORNED_AXE]: "Death is not an outright grim card; it signals that a chapter in your life is coming to its natural end, and a new one shall follow. The Horned Axe is interesting as Death, herself having changed fundamentally. She is enduring like Death itself. Her thirst for vengeance is just as enduring. She is not kind. But when she speaks - listen.",
+  [HOUR_NAMES.MOTHER_OF_ANTS]: "The Hierophant mandates belief, conformity, and spiritual wisdom. Traditionally, this card depicts a robed, crowned man on a throne. The Mother of Ants, interestingly, seems more thematically connected to the Hierophant Reversed: rebellion, new ways, unconformity. She helped overthrow the Stone Hours, opening the way for mortals to ascend.",
+  [HOUR_NAMES.MADRUGAD]: "Temperance is a card that signifies balance, restraint, and calm. The Madrugad is a power of balance - when the balance is disturbed, she restores it. She exacerbeates the control/patience of Temperance to a severe degree. When she comes to us as Temperance, we are being warned that violating a rule or balance in our lives presently is unwise. Careful now.",
+  [HOUR_NAMES.RED_GRAIL]: "The Devil evokes dependence and the inner darkness that can rule (and misrule) our decisions. Appetites. Temptations. Reinforcement of poor habits. Drawing the devil may indicate an emptiness you are filling with short-term gratifications. The Red Grail adopts and exacerbates the worst parts of the Devil. She will tell you to continue your indulgences, as desire and ambition drive us.",
+  [HOUR_NAMES.WOLF_DIVIDED]: "The Tower foretells the collapse of ambitions and established conceptions of life, drawing attention to the faulty ideals upon which they were built. There is almost nothing redeeming about the Wolf-Divided, as he emobides the violent upheaval of the card more than anything else. An abrupt, radical change is coming. You may not like it.",
+  [HOUR_NAMES.VAGABOND]: `The Star foretells hope, renewal, and faith. The Vagabond has a different spin on "hope" and "renewal". For one, she is often prophesied as one who will undertake the Pilgrimage that will bring an apocalyptic second dawn. One cannot always pin our hopes on her, for she is as mercurial/flighty as she is joyous/free. You might be left behind halfway through the journey.`,
+  [HOUR_NAMES.SISTER_AND_WITCH]: `The Moon signifies illusion, secrets, and the unconscious. The Sister-and-Witch recolours the Moon's themes of illusion/secrecy. The Twins ascended by submitting to the sea, and when we draw them as the Moon, we are similarly asked to submit to the depths of the subconscious to navigate the dark path ahead.`,
+  [HOUR_NAMES.FLOWERMAKER]: "The Sun promises happiness, success, and prosperity. The Flowermaker takes cues from the Sun, but is more sinister in nature. Narcotics and the haze/alteration of perception that arise from their use are associated with him. He tempts us to his side with dreams/fantasies that may be our undoing.",
+  [HOUR_NAMES.FORGE_OF_DAYS]: `Judgement heralds rebirth, absolution, and (obviously) judgement. The Forge-of-Days most readily embodies the "rebirth" idea of the card, being the hour who "remakes with fire" and "who ends what will not change." She creates and destroys, likewise, Judgement marks a irreversible change. Sometimes we emerge from the Forge greater than before, sometimes we emerge as ash.`,
+  [HOUR_NAMES.GIRIBRAGO]: "The World signifies voyages, achievement, and completion. Giribrago, is not well-understood. He might be an intruding presence in our world. If you encounter him as the World, expect your achievements to be accompanied by strange gifts; expect the truly unknown/bizarre. What awaits you next?",
+};
+
 const TAROT_QUICK_READINGS = {
   [HOUR_NAMES.MOTH]: "Folly, mania, delirium, frenzy",
   [HOUR_NAMES.WATCHMAN]: "Energy, power, potential",
@@ -48,9 +73,10 @@ const TAROT_QUICK_READINGS = {
   [HOUR_NAMES.FLOWERMAKER]: "Material happiness, vitality",
   [HOUR_NAMES.FORGE_OF_DAYS]: "Rebirth, absolution",
   [HOUR_NAMES.GIRIBRAGO]: "Voyage, assured success",
-}
+};
 
 module.exports = {
   HOUR_TAROT,
+  HOUR_TAROT_DESCRIPTIONS,
   TAROT_QUICK_READINGS
 };

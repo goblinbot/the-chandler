@@ -6,8 +6,15 @@ const createTarotReplyFields = (hour) => {
 
     if (hour.tarot) {
         _replyFields.push({
-            name: `In Arcana, this takes the place of '${hour.tarot}'.`,
+            name: `Major Arcana; this Hour as '${hour.tarot}'.`,
             value: `Quick Themes: ${hour.tarotRead}`,
+        });
+    }
+
+    if (hour.tarotDescription) {
+        _replyFields.push({
+            name: '',
+            value: hour.tarotDescription,
         });
     }
 
