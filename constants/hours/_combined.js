@@ -1,7 +1,7 @@
 const { ASPECT_COMBINATION_TYPES } = require("../combinations/_types");
 const { HOUR_NAMES, HOUR_ALT_NAMES } = require("./names");
 const { HOUR_NUMBERS, HOUR_WEIGHTS } = require("./numbers");
-const { HOUR_TAROT, TAROT_QUICK_READINGS, HOUR_TAROT_DESCRIPTIONS } = require("./tarot");
+const { HOUR_TAROT, TAROT_QUICK_READINGS, HOUR_TAROT_DESCRIPTIONS, HOUR_UNOFFICIAL_TAROT } = require("./tarot");
 const {
   HOUR_ASPECTS,
   HOUR_PRIMARY_ASPECTS,
@@ -38,8 +38,9 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
     if (HOUR_DESCRIPTIONS[name]) _hour.description = HOUR_DESCRIPTIONS[name];
     if (HOUR_MATERIALS[name]) _hour.materials = HOUR_MATERIALS[name];
     if (HOUR_SINGLETON_DOMAINS[name]) _hour.singletonDescription = true;
+    if (HOUR_UNOFFICIAL_TAROT[name]) _hour.isUnofficialTarot = true;
 
-    _hour.weight = HOUR_TAROT[name] ? HOUR_WEIGHTS.TAROT : HOUR_WEIGHTS.NON_TAROT;
+    _hour.weight = HOUR_TAROT[name] ? HOUR_UNOFFICIAL_TAROT[name] ? HOUR_WEIGHTS.NON_TAROT : HOUR_WEIGHTS.TAROT : HOUR_WEIGHTS.NON_TAROT;
 
     if (HOURS_REQUIRING_AT_LEAST_TWO.includes(name)) {
       _hour.requireMultipleAspects = true;

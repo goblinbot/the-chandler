@@ -5,8 +5,10 @@ const createTarotReplyFields = (hour) => {
     const _replyFields = [];
 
     if (hour.tarot) {
+        const _intro = hour.isUnofficialTarot ? `Unconfirmed; this Hour might take the place of ${hour.tarot}.` : `Major Arcana; this Hour as '${hour.tarot}'.`
+
         _replyFields.push({
-            name: `Major Arcana; this Hour as '${hour.tarot}'.`,
+            name: _intro,
             value: `Quick Themes: ${hour.tarotRead}`,
         });
 
@@ -22,8 +24,6 @@ const createTarotReplyFields = (hour) => {
             value: "This Hour does not have a tarot equivalent.\nFor better or for worse, this is an uncommon result."
         })
     }
-
-
 
     return _replyFields;
 }
