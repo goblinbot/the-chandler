@@ -8,12 +8,14 @@ module.exports = {
     const isItNuma = Math.random() < numaChance;
 
     const today = new Date();
+    const dd = today.getDate();
+    const mm = today.getMonth();
 
-    console.log(today);
-    console.log(today.getMonth())
-    console.log(today.getDate())
+    today.setHours(today.getHours() + 2);
+    const ddTz = today.getDate();
 
-    if (today.getMonth() === 5 && today.getDate() === 28) {
+
+    if (mm === 5 && (dd === 28 || ddTz === 28)) {
       await interaction.reply('June 28th, once again. Numa.');
     } else {
       const reply = isItNuma
