@@ -9,6 +9,10 @@ module.exports = {
 
     const today = new Date();
 
+    console.log(today);
+    console.log(today.getMonth())
+    console.log(today.getDate())
+
     if (today.getMonth() === 5 && today.getDate() === 28) {
       await interaction.reply('June 28th, once again. Numa.');
     } else {
