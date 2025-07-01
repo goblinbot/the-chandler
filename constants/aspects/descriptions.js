@@ -25,10 +25,10 @@ const ASPECT_DESCRIPTIONS = {
     expanded:
       "Those who find themselves compelled by the principle of heart are defined by an upbeat mood, and unwavering determination.",
   },
-  // [ASPECT_NAMES.SECRET_HISTORIES]: {
-  //   expanded: "",
-  //   short: "",
-  // },
+  [ASPECT_NAMES.SECRET_HISTORIES]: {
+    expanded: "This all-encompassing quality, including the Lore of the other eight major principles, leaves its status as a Principle open to heavy debate.",
+    short: "History is the scar on the world's skin. Secret Histories is an unique principle, representing all forms of Lore, the complexities of the world, and it's many pasts. It is deeply linked with Rose.",
+  },
   [ASPECT_NAMES.KNOCK]: {
     short:
       "Knock is the principle of openings. Any and all openings, including wounds.",

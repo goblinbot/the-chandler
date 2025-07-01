@@ -62,12 +62,12 @@ const RAW_ASPECTS = [
     color: 0xf97a89,
     subvertedBy: ASPECT_NAMES.GRAIL,
   },
-  // {
-  //   name: ASPECT_NAMES.SECRET_HISTORIES,
-  //   icon: `aspectHistories.png`,
-  //   type: ASPECT_TYPES.PRINCIPLE,
-  //   color: 0xfe43f0,
-  // },
+  {
+    name: ASPECT_NAMES.SECRET_HISTORIES,
+    icon: `aspectHistories.png`,
+    type: ASPECT_TYPES.PRINCIPLE,
+    color: 0xfe43f0,
+  },
   {
     name: ASPECT_NAMES.KNOCK,
     icon: `aspect${ASPECT_NAMES.KNOCK}.png`,

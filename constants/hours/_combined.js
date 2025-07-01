@@ -11,6 +11,7 @@ const {
 const { HOUR_DESCRIPTIONS, HOUR_SINGLETON_DOMAINS, HOUR_DOMAINS } = require("./descriptions");
 const { HOUR_MATERIALS } = require("./materials");
 const { HOUR_IMAGES } = require("./images");
+const { HOUR_FOOTNOTES } = require("./footNotes");
 
 const THE_HOURS = [];
 const THE_HOURS_OBJECT_LIST = {};
@@ -39,6 +40,7 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
     if (HOUR_MATERIALS[name]) _hour.materials = HOUR_MATERIALS[name];
     if (HOUR_SINGLETON_DOMAINS[name]) _hour.singletonDescription = true;
     if (HOUR_UNOFFICIAL_TAROT[name]) _hour.isUnofficialTarot = true;
+    if (HOUR_FOOTNOTES[name]) _hour.footNote = HOUR_FOOTNOTES[name];
 
     _hour.weight = HOUR_TAROT[name] ? HOUR_UNOFFICIAL_TAROT[name] ? HOUR_WEIGHTS.NON_TAROT : HOUR_WEIGHTS.TAROT : HOUR_WEIGHTS.NON_TAROT;
 

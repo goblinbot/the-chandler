@@ -30,12 +30,13 @@ const HOUR_IMAGES = {
     [HOUR_NAMES.APPLEBRIGHT]: 'the-applebright-by-heyu-6466.png',
     [HOUR_NAMES.MARE]: 'mare.jpg',
     // [HOUR_NAMES.WITNESS]: '',
-    // [HOUR_NAMES.CHANDLER]: '',
+    [HOUR_NAMES.CHANDLER]: 'the-chandler-by-heyu-6466.png',
     [HOUR_NAMES.SEVEN_COILS]: 'seven-coils-by-roashe.jpg',
     [HOUR_NAMES.WHEEL]: 'the-wheel-by-roashe.jpg',
     [HOUR_NAMES.FLINT]: 'flint-by-roashe.png',
     [HOUR_NAMES.EGG]: 'egg-unhatching-by-roashe.jpg',
-    [HOUR_NAMES.TIDE]: 'the-tide.png',
+    [HOUR_NAMES.TIDE]: 'the-tide-by-roashe.png',
+    [HOUR_NAMES.NEW_KING]: 'new-king-by-heyu-6466.jpg',
     // [HOUR_NAMES.SUN_IN_SPLENDOUR]: ',
 };
 

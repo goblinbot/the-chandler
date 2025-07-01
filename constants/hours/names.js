@@ -36,18 +36,19 @@ const HOUR_NAMES = {
   EGG: "Egg Unhatching",
   TIDE: "Tide",
   SUN_IN_SPLENDOUR: "Sun-in-Splendour",
+  NEW_KING: "New King",
 };
 
 // The <hour>, also called The <alt>
 const HOUR_ALT_NAMES = {
   [HOUR_NAMES.WATCHMAN]: "Watchman",
-  [HOUR_NAMES.MALACHITE]: "Ring-Yew",
-  [HOUR_NAMES.VELVET]: "Moldywarp",
+  [HOUR_NAMES.MALACHITE]: "Ring-Yew, The Honey-tree",
+  [HOUR_NAMES.VELVET]: "Moldywarp, The Black-flax",
   [HOUR_NAMES.THUNDERSKIN]: "Heart Relentless, The Vigilant Storm",
   [HOUR_NAMES.MOTHER_OF_ANTS]: "Daughter of Venoms, St. Agnes, The Key-Serpent",
   [HOUR_NAMES.VAGABOND]:
     "Centipede, The Pilgrim, The Sight-Thief, and many other names.",
-  [HOUR_NAMES.COLONEL]: "Chiliarch, The Cartographer of Scars",
+  [HOUR_NAMES.COLONEL]: "Chiliarch, The Cartographer of Scars, The Great One",
   [HOUR_NAMES.LIONSMITH]: "Golden General",
   [HOUR_NAMES.ELEGIAST]: "Ivory Dove",
   [HOUR_NAMES.BEACHCOMBER]: "Beach-Crow",

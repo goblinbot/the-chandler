@@ -32,6 +32,7 @@ const HOUR_PRIMARY_ASPECTS = {
   [HOUR_NAMES.EGG]: ASPECT_NAMES.SCALE,
   [HOUR_NAMES.BLACKBONE]: ASPECT_NAMES.MOON,
   [HOUR_NAMES.APPLEBRIGHT]: ASPECT_NAMES.NECTAR,
+  [HOUR_NAMES.TIDE]: ASPECT_NAMES.GRAIL,
 };
 
 const HOUR_ASPECTS = {
@@ -123,6 +124,7 @@ const HOUR_ASPECTS = {
   [HOUR_NAMES.EGG]: [ASPECT_NAMES.SCALE, ASPECT_NAMES.LANTERN],
   [HOUR_NAMES.BLACKBONE]: [ASPECT_NAMES.MOON, ASPECT_NAMES.SCALE],
   [HOUR_NAMES.APPLEBRIGHT]: [ASPECT_NAMES.NECTAR, ASPECT_NAMES.GRAIL],
+  [HOUR_NAMES.TIDE]: [ASPECT_NAMES.GRAIL, ASPECT_NAMES.SCALE]
 };
 
 // Hours requiring at least two Aspect Matches to be viable results
@@ -136,6 +138,7 @@ const HOURS_REQUIRING_AT_LEAST_TWO = [
   HOUR_NAMES.EGG,
   HOUR_NAMES.BLACKBONE,
   HOUR_NAMES.APPLEBRIGHT,
+  HOUR_NAMES.TIDE,
 ];
 
 const HOUR_PRECURSOR_ASPECTS = {
@@ -148,15 +151,12 @@ const HOUR_PRECURSOR_ASPECTS = {
 
 // eslint-disable-next-line no-unused-vars
 const _unfilledHours = {
-  [HOUR_NAMES.RISING_SPIDER]: { primary: [], secondary: [] },
-  [HOUR_NAMES.WITNESS]: { primary: [], secondary: [] },
-  [HOUR_NAMES.CHANDLER]: { primary: [], secondary: [] },
-  [HOUR_NAMES.SNOW]: { primary: [], secondary: [] },
-  [HOUR_NAMES.TIDE]: { primary: [], secondary: [] },
-  [HOUR_NAMES.SUN_IN_SPLENDOUR]: {
-    primary: [],
-    secondary: [],
-  },
+  [HOUR_NAMES.RISING_SPIDER]: [],
+  [HOUR_NAMES.WITNESS]: [],
+  [HOUR_NAMES.CHANDLER]: [],
+  [HOUR_NAMES.SNOW]: [],
+  [HOUR_NAMES.SUN_IN_SPLENDOUR]: [],
+  [HOUR_NAMES.NEW_KING]: [],
 };
 
 module.exports = {

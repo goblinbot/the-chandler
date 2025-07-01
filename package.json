@@ -1,7 +1,7 @@
 {
   "name": "the-chandler",
-  "version": "1.1.0",
-  "description": "Cultist aura discord bot",
+  "version": "1.1.1",
+  "description": "Cultist aura&tarot discord bot",
   "main": "index.js",
   "scripts": {
     "start": "npm run deploy && node .",
