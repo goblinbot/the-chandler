@@ -27,7 +27,7 @@ const ASPECT_DESCRIPTIONS = {
   },
   [ASPECT_NAMES.SECRET_HISTORIES]: {
     expanded: "This all-encompassing quality, including the Lore of the other eight major principles, leaves its status as a Principle open to heavy debate.",
-    short: "History is the scar on the world's skin. Secret Histories is an unique principle, representing all forms of Lore, the complexities of the world, and it's many pasts. It is deeply linked with Rose.",
+    short: "History is the scar on the world's skin. An unique principle, representing all forms of Lore, the complexities of the world, and it's many pasts.",
   },
   [ASPECT_NAMES.KNOCK]: {
     short:
