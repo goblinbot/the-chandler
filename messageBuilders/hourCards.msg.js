@@ -21,7 +21,7 @@ const createTarotReplyFields = (hour) => {
     } else {
         _replyFields.push({
             name: "Major Arcana",
-            value: "This Hour does not have a tarot equivalent. For better or for worse, this is an uncommon result."
+            value: "This Hour does not have a tarot equivalent.\nFor better or for worse, this is an uncommon result."
         })
     }
 
