@@ -22,6 +22,7 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
     const _hour = {
       key,
       name: `The ${name}`,
+      nameRaw: name,
       type: ASPECT_COMBINATION_TYPES.HOUR,
       number: HOUR_NUMBERS[name],
       primaryAspect: HOUR_PRIMARY_ASPECTS[name],
@@ -29,20 +30,28 @@ for (const [key, name] of Object.entries(HOUR_NAMES)) {
       image: HOUR_IMAGES[name],
       description: HOUR_DESCRIPTIONS[name],
       domains: HOUR_DOMAINS[name],
+      weight: HOUR_WEIGHTS.DEFAULT,
     };
 
     if (HOUR_ALT_NAMES[name]) _hour.altName = `The ${HOUR_ALT_NAMES[name]}`;
-    if (HOUR_TAROT[name]) _hour.tarot = HOUR_TAROT[name];
-    if (HOUR_TAROT_DESCRIPTIONS[name]) _hour.tarotDescription = HOUR_TAROT_DESCRIPTIONS[name];
-    if (TAROT_QUICK_READINGS[name]) _hour.tarotRead = TAROT_QUICK_READINGS[name];
+
     if (HOUR_PRECURSOR_ASPECTS[name]) _hour.precursorAspect = HOUR_PRECURSOR_ASPECTS[name];
     if (HOUR_DESCRIPTIONS[name]) _hour.description = HOUR_DESCRIPTIONS[name];
     if (HOUR_MATERIALS[name]) _hour.materials = HOUR_MATERIALS[name];
     if (HOUR_SINGLETON_DOMAINS[name]) _hour.singletonDescription = true;
-    if (HOUR_UNOFFICIAL_TAROT[name]) _hour.isUnofficialTarot = true;
     if (HOUR_FOOTNOTES[name]) _hour.footNote = HOUR_FOOTNOTES[name];
 
-    _hour.weight = HOUR_TAROT[name] ? HOUR_UNOFFICIAL_TAROT[name] ? HOUR_WEIGHTS.NON_TAROT : HOUR_WEIGHTS.TAROT : HOUR_WEIGHTS.NON_TAROT;
+    if (HOUR_TAROT[name]) {
+      _hour.tarot = HOUR_TAROT[name];
+      _hour.tarotDescription = HOUR_TAROT_DESCRIPTIONS[name];
+      _hour.tarotRead = TAROT_QUICK_READINGS[name];
+      _hour.weight = HOUR_WEIGHTS.TAROT;
+    };
+
+    if (HOUR_UNOFFICIAL_TAROT[name]) {
+      _hour.isUnofficialTarot = true;
+      _hour.weight = HOUR_WEIGHTS.UNOFFICIAL_TAROT;
+    }
 
     if (HOURS_REQUIRING_AT_LEAST_TWO.includes(name)) {
       _hour.requireMultipleAspects = true;

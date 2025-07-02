@@ -40,6 +40,21 @@ const HOUR_IMAGES = {
     // [HOUR_NAMES.SUN_IN_SPLENDOUR]: ',
 };
 
+const HOUR_ART_IS_UNOFFICIAL = {
+    [HOUR_NAMES.GIRIBRAGO]: true,
+    [HOUR_NAMES.BLACKBONE]: true,
+    [HOUR_NAMES.APPLEBRIGHT]: true,
+    [HOUR_NAMES.CHANDLER]: true,
+    [HOUR_NAMES.CHANDLER]: true,
+    [HOUR_NAMES.WHEEL]: true,
+    [HOUR_NAMES.SEVEN_COILS]: true,
+    [HOUR_NAMES.TIDE]: true,
+    [HOUR_NAMES.EGG]: true,
+    [HOUR_NAMES.FLINT]: true,
+    [HOUR_NAMES.NEW_KING]: true,
+};
+
 module.exports = {
     HOUR_IMAGES,
+    HOUR_ART_IS_UNOFFICIAL,
 }
