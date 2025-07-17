@@ -50,6 +50,10 @@ describe('Hours (forEach)', () => {
             exp.expect(_exists).toBeTruthy();
         });
 
+        it(`${i} should have a description`, () => {
+            exp.expect(hour.description).toBeTruthy();
+        });
+
         if (hour.requireMultipleAspects) {
             it(`${i} requires Multiple Aspects to match, Should have multiple aspects`, () => {
                 exp.expect(hour.aspects.length).toBeGreaterThan(1);

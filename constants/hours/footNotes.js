@@ -10,6 +10,7 @@ const HOUR_FOOTNOTES = {
     [HOUR_NAMES.CHANDLER]: `Art by 河鱼 (heyu-6466)`,
     [HOUR_NAMES.BLACKBONE]: `Art by 河鱼 (heyu-6466)`,
     [HOUR_NAMES.NEW_KING]: `Art by 河鱼 (heyu-6466)`,
+    [HOUR_NAMES.SNOW]: `Art by 苏酥会酥 (heyu-6466)`,
     [HOUR_NAMES.TIDE]: `Art by RoAshe`,
     [HOUR_NAMES.SEVEN_COILS]: `Art by RoAshe`,
     [HOUR_NAMES.FLINT]: `Art by RoAshe`,

@@ -23,7 +23,8 @@ const HOUR_TAROT = {
   [HOUR_NAMES.FLOWERMAKER]: "The Sun",
   [HOUR_NAMES.FORGE_OF_DAYS]: "Judgement",
   [HOUR_NAMES.GIRIBRAGO]: "The World",
-  [HOUR_NAMES.APPLEBRIGHT]: "The High Priestess, reversed"
+  [HOUR_NAMES.APPLEBRIGHT]: "The High Priestess, reversed",
+  [HOUR_NAMES.SNOW]: "The Fool, reversed",
 };
 
 const HOUR_TAROT_DESCRIPTIONS = {
@@ -49,7 +50,8 @@ const HOUR_TAROT_DESCRIPTIONS = {
   [HOUR_NAMES.FLOWERMAKER]: "The Sun promises happiness, success, and prosperity. The Flowermaker takes cues from the Sun, but is more sinister in nature. Narcotics and the haze/alteration of perception that arise from their use are associated with him. He tempts us to his side with dreams/fantasies that may be our undoing.",
   [HOUR_NAMES.FORGE_OF_DAYS]: `Judgement heralds rebirth, absolution, and (obviously) judgement. The Forge-of-Days most readily embodies the "rebirth" idea of the card, being the hour who "remakes with fire" and "who ends what will not change." She creates and destroys, likewise, Judgement marks a irreversible change. Sometimes we emerge from the Forge greater than before, sometimes we emerge as ash.`,
   [HOUR_NAMES.GIRIBRAGO]: "The World signifies voyages, achievement, and completion. If you encounter the Giribrago as the World, expect your achievements to be accompanied by strange gifts; expect the truly unknown/bizarre. What awaits you next?",
-  [HOUR_NAMES.APPLEBRIGHT]: "The High Priestess really encourages one to have faith in the universe. To surrender and let go. The Applebright being this card reversed sounds strikes more like a warning."
+  [HOUR_NAMES.APPLEBRIGHT]: "The High Priestess really encourages one to have faith in the universe. To surrender and let go. The Applebright being this card reversed sounds strikes more like a warning.",
+  [HOUR_NAMES.SNOW]: "Traditionally, 0 and 22 both are taken by The Fool; Reversed this would indicate a need for caution, and a more considered approach to new beginnings. Learning from the past. For 8 years the city of Abydos was filled with slow death, silent beauty and frosty ecstacy - until rebels launched a screaming revolution against The Snow.",
 };
 
 const TAROT_QUICK_READINGS = {
@@ -75,11 +77,13 @@ const TAROT_QUICK_READINGS = {
   [HOUR_NAMES.FLOWERMAKER]: "Material happiness, vitality",
   [HOUR_NAMES.FORGE_OF_DAYS]: "Rebirth, absolution",
   [HOUR_NAMES.GIRIBRAGO]: "Voyage, assured success",
-  [HOUR_NAMES.APPLEBRIGHT]: "Repressed intuition, hidden motives, confusion, cognitive dissonance"
+  [HOUR_NAMES.APPLEBRIGHT]: "Repressed intuition, hidden motives, confusion, cognitive dissonance",
+  [HOUR_NAMES.SNOW]: "Recklessness, Lack of Foresight, failure to learn from past mistakes",
 };
 
 const HOUR_UNOFFICIAL_TAROT = {
   [HOUR_NAMES.APPLEBRIGHT]: true,
+  [HOUR_NAMES.SNOW]: true,
 }
 
 module.exports = {

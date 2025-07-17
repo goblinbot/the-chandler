@@ -31,7 +31,8 @@ const HOUR_DESCRIPTIONS = {
   [HOUR_NAMES.EGG]: `"The Sun was warmer once - no brighter, but its touch was a kind of mercy".\nThe ${HOUR_NAMES.EGG} was one of the gods-rom stone, who ruled before humanity. It once was the pale-white gold sun, peeking out through the mists. It is said that he offered protection to humanity in exchange for blood sacrifices, until one day a foolish mortal stole some of its light.`,
   [HOUR_NAMES.APPLEBRIGHT]: `The ${HOUR_NAMES.APPLEBRIGHT} is a mysterious Hour from Nowhere, thought to be the counterpart of the ${HOUR_NAMES.FLOWERMAKER}. Her followers specialize in horticulture and medicine. Despite her association with healing, the ${HOUR_NAMES.APPLEBRIGHT} is described as having the power to cause harm if "invited" to do so.\n\nThe poisoned apple iconography suggests this harm would be brought on by one's own actions. After all, like The ${HOUR_NAMES.FLOWERMAKER}, she is linked to the 'unwise' nature of desires. The eternal sheen of youth could mask a deepening rot.`,
   [HOUR_NAMES.BLACKBONE]: `The ${HOUR_NAMES.BLACKBONE} is one of the Hours about which little information is currently known. Its most understood aspect is her connection Grail and the Sea; supposedly, she is 'sated' by the sinking of ships.\n\nSome speculate the ${HOUR_NAMES.BLACKBONE} is what remained when the Grail drank the Tide. Others attribute the existance of earthquakes to "Her limbs being further fractured".`,
-  [HOUR_NAMES.TIDE]: `The sea was separated from the midnight Sky, and The ${HOUR_NAMES.TIDE} was given the sea. The ${HOUR_NAMES.TIDE} was one of the Hours before mankind, presiding over pleasure and luxury.\nUntil The Grail drained her dry. And disposed what remained into the seas.\n\nIt is described as a "coral palace-crown", swimming endlessly absorbing immortal wanderers. Some to be coated in minerals and juices and expelled, polished like jewels. Others would feed its thorny heart. The ${HOUR_NAMES.TIDE} might be dead, but many wait for the sea to return.`
+  [HOUR_NAMES.TIDE]: `The sea was separated from the midnight Sky, and The ${HOUR_NAMES.TIDE} was given the sea. The ${HOUR_NAMES.TIDE} was one of the Hours before mankind, presiding over pleasure and luxury.\nUntil The Grail drained her dry. And disposed what remained into the seas.\n\nIt is described as a "coral palace-crown", swimming endlessly absorbing immortal wanderers. Some to be coated in minerals and juices and expelled, polished like jewels. Others would feed its thorny heart. The ${HOUR_NAMES.TIDE} might be dead, but many wait for the sea to return.`,
+  [HOUR_NAMES.SNOW]: `The ${HOUR_NAMES.SNOW} is an overthrown Hour from Nowhere, on which only extremely vague references exist. She appears to be the most extreme Hour of Silence, with followers claiming that "Before words, everything was intact; if silence returns, we can enjoy eternal peace". She is often associated with Chione.\nIt is particularly difficult to find references to the ${HOUR_NAMES.SNOW} in lore, as all Hours of the Aspect of Winter - and the Aspect itself - all use symbols and themes tied to endings and snow.`
 };
 
 const HOUR_DOMAINS = {
@@ -65,7 +66,8 @@ const HOUR_DOMAINS = {
   [HOUR_NAMES.EGG]: `Mercy, the sun, the moon, flight, serpents`,
   [HOUR_NAMES.APPLEBRIGHT]: `Youth, healing, mutation`,
   [HOUR_NAMES.BLACKBONE]: `The crushing black depths of the deep sea`,
-  [HOUR_NAMES.TIDE]: `Pleasure, Luxury, Blood, The ocean`
+  [HOUR_NAMES.TIDE]: `Pleasure, Luxury, Blood, The ocean`,
+  [HOUR_NAMES.SNOW]: `Winter, death, silence, endings and stasis`,
 };
 
 const HOUR_SINGLETON_DOMAINS = {

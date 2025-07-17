@@ -64,6 +64,7 @@ const RANDOM_QUOTES = [
   "Break a window. What have you made? A new way? A new light? A new weapon? - Natalia Brulleau",
   "What in the Wolf-Divided's most splintered Name hath here been wrought?",
   "The precise colour of the hours when one cannot sleep.",
+  "I have my fire, my books, my clock, my window on the world where they do other things. I could have been unhappy, I'm not unhappy. This was a succesful life, and when it is over the sweet earth will fill my mouth, softer than splinters.",
   "Into the Wood in dark of night\n\nI made my way with fire's sight\n\nTo a silent forest of lights\n\nWhere I found a gold apple bright",
   "I dreamt of the rain, whispering in the eaves, tapping on windows like an old friend, hissing prankishly in the chimney. It is difficult to be unhappy in the right kind of rain.",
 ];
