@@ -53,6 +53,7 @@ const RANDOM_QUOTES = [
   "Cover your eyes, if you like. It will serve no purpose.",
   "To open certain Ways, one must first open oneself.",
   "ALIIS SI LICET, TIBI NON LICET ( IT IS PERMITTED TO US; IT IS NOT PERMITTED TO YOU )",
+  "Wait in the white on the walls. Watch the sun slow. Chione walks the streets in silence. Her skirts are the wind. So white her surface. See what ceases in the storm.",
   "Light LEAKS through the CRACKS. My mind is BRIGHTER than it EVER was. THE HIGHER I RISE THE MORE I SEE.",
   "The Glory is a question, and the Moth always answers Yes",
   "Copper, coal, fire, cinnamon, sunlight, obsidian. Add salt to taste. Serve. That's Ithastry.",
